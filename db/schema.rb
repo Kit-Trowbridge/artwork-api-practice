@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_02_24_115608) do
+ActiveRecord::Schema[7.1].define(version: 2025_02_24_122709) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "artworks", force: :cascade do |t|
-    t.string "artist"
+    t.string "artist", default: "Anonymous"
     t.string "title"
     t.string "image_url"
     t.integer "year"
