@@ -1,0 +1,5 @@
+<h1><%= @artwork.title %></h1>
+<h3>by <%= @artwork.artist %>, <%= @artwork.year %></h3>
+<%= image_tag @artwork.image_url, alt_text: @artwork.alt_text %>
+<!--sanitize prevents <p> tags from showing up in description-->
+<p><%= sanitize @artwork.description %></p>

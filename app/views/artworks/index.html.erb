@@ -1,0 +1,8 @@
+<h1>All artworks</h1>
+<ul>
+  <% @artworks.each do |artwork| %>
+    <li>
+      <%= link_to artwork.title, artwork_path(artwork) %>
+    </li>
+  <% end %>
+</ul>
