@@ -9,7 +9,7 @@ artworks = JSON.parse(serialized_artworks)["data"]
 
 artworks.each do |artwork|
   Artwork.create(
-    artist: artwork["artist_title"].present? || "Anonymous",
+    artist: artwork["artist_title"].presence || "Anonymous",
     title: artwork["title"],
     description: artwork["description"],
     image_url: "https://www.artic.edu/iiif/2/#{artwork["image_id"]}/full/843,/0/default.jpg",
